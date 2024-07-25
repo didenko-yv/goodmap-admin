@@ -3,7 +3,7 @@ runtime: python312
 entrypoint: gunicorn --bind :$PORT problematy.wsgi:application
 
 env_variables:
-    APPENGINE_URL: https://animated-backup-427810-r5.uc.r.appspot.com
+    APPENGINE_URL: <your_app_uri>
     SECRET_KEY: <YOUR_SECRET_KEY>
     DB_NAME: <your_db_name>
     DB_USER: <your_db_user>
