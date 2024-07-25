@@ -4,12 +4,14 @@ entrypoint: gunicorn --bind :$PORT problematy.wsgi:application
 
 env_variables:
     APPENGINE_URL: https://animated-backup-427810-r5.uc.r.appspot.com
-    SECRET_KEY: "asdasasdasdasd"
-    DB_NAME: "problematydb"
-    DB_USER: "uproblematy"
-    DB_PASSWORD: "ACTvjzDyAsyS4fl3"
-    DB_HOST: "/cloudsql/animated-backup-427810-r5:us-central1:problematy"
-    DB_PORT: "5432"
+    SECRET_KEY: <YOUR_SECRET_KEY>
+    DB_NAME: <your_db_name>
+    DB_USER: <your_db_user>
+    DB_PASSWORD: <your_db_password>
+    DB_HOST: <your_db_host>
+    DB_PORT: <your_db_port>
+    LOCATIONS_BLOB_FILEPATH: <your_json_filepath>
+    APPLICATION_BUCKET_NAME: <your_bucket_name>
 
 handlers:
 # This configures Google App Engine to serve the files in the app's static

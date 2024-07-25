@@ -5,5 +5,5 @@ from problematy import settings
 
 
 def download_locations(request):
-    data = download_blob(settings.LOCATIONS_BLOB_PATH)
+    data = download_blob(settings.LOCATIONS_BLOB_FILEPATH)
     return JsonResponse(data, safe=False)

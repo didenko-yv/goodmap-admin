@@ -113,7 +113,7 @@ def update_map_json():
             'location_attributes__type_of_place_attribute__attribute', 'location_attributes__selected_values')
 
         try:
-            data = download_blob(settings.LOCATIONS_BLOB_PATH)
+            data = download_blob(settings.LOCATIONS_BLOB_FILEPATH)
         except Exception:
             data = {"map": {"data": []}}
 
@@ -181,7 +181,7 @@ def update_map_json():
         json_str = json.dumps(data, ensure_ascii=False, indent=4)
         json_bytes_io = io.BytesIO(json_str.encode())
 
-        upload_blob(file=json_bytes_io, blob_name=settings.LOCATIONS_BLOB_PATH)
+        upload_blob(file=json_bytes_io, blob_name=settings.LOCATIONS_BLOB_FILEPATH)
 
         # accessible_by = attr_data
         # data['map']['data'].append(accessible_by)
